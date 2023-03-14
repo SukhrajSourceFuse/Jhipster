@@ -1,0 +1,49 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+    <PropertyGroup>
+        <Version>0.0.1</Version>
+        <TargetFramework>net6.0</TargetFramework>
+        <LangVersion>latest</LangVersion>
+        <AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+        <RootNamespace>Jhipster</RootNamespace>
+        <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
+        <TypeScriptToolsVersion>Latest</TypeScriptToolsVersion>
+        <IsPackable>false</IsPackable>
+        <DefaultItemExcludes>$(DefaultItemExcludes);$(SpaRoot)node_modules\**</DefaultItemExcludes>
+
+        <!-- Set this to true if you enable server-side prerendering -->
+        <BuildServerSideRenderer>false</BuildServerSideRenderer>
+    </PropertyGroup>
+
+    <ItemGroup>
+        <PackageReference Include="JHipsterNet.Core" />
+        <PackageReference Include="JHipsterNet.Web" />
+        <PackageReference Include="AutoMapper.Extensions.Microsoft.DependencyInjection" />
+        <PackageReference Include="Hellang.Middleware.ProblemDetails" />
+        <PackageReference Include="Microsoft.AspNetCore.SpaServices.Extensions" />
+        <PackageReference Include="Microsoft.AspNetCore.Mvc.NewtonsoftJson" />
+        <PackageReference Include="Scrutor" />
+        <PackageReference Include="Serilog.AspNetCore" />
+        <PackageReference Include="Serilog.Settings.Configuration" />
+        <PackageReference Include="Serilog.Sinks.Console" />
+        <PackageReference Include="Serilog.Enrichers.Process" />
+        <PackageReference Include="Serilog.Enrichers.Thread" />
+        <PackageReference Include="Serilog.Sinks.SyslogMessages" />
+        <PackageReference Include="Swashbuckle.AspNetCore" />
+        <PackageReference Include="LanguageExt.Core" />
+        <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+        <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+        <PackageReference Include="BCrypt.Net-Next" />
+        <PackageReference Include="Winton.Extensions.Configuration.Consul" />
+        <PackageReference Include="Consul" />
+    </ItemGroup>
+
+    <ItemGroup>
+        <ProjectReference Include="..\DemoJhipster.Infrastructure\DemoJhipster.Infrastructure.csproj" />
+        <ProjectReference Include="..\DemoJhipster.Domain.Services\DemoJhipster.Domain.Services.csproj" />
+        <ProjectReference Include="..\DemoJhipster.Crosscutting\DemoJhipster.Crosscutting.csproj" />
+        <ProjectReference Include="..\DemoJhipster.Dto\DemoJhipster.Dto.csproj" />
+        <ProjectReference Include="..\DemoJhipster.Domain\DemoJhipster.Domain.csproj" />
+    </ItemGroup>
+
+</Project>
